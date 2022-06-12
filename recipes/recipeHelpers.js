@@ -8,23 +8,23 @@ module.exports = {
   findByID,
 };
 
+// returns all recipes with steps
 function findAll() {
-  // returns all recipes
-  return db("recipe");
+  return db("recipe").join("step", "recipe.id", "=", "step.recipe_id");
 }
 
+// insert new recipe
 function create() {}
-// insert new recipe async
 
-function update() {}
 // update existing recipe
+function update() {}
 
+// find recipe by id
 function findByID(id) {
-  // find recipe by id
   return db("recipe").where({ id });
 }
 
+// remove recipe by id
 function remove(id) {
-  // remove recipe by id
   return db("recipe").where({ id }).del();
 }

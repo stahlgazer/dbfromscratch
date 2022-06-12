@@ -2,30 +2,22 @@ const db = require("../database/dbConfig.js");
 
 module.exports = {
   createStep,
-  findStepsByRecipeId,
   updateByStepId,
   removeByStepId,
 };
 
-function createStep(step) {
-  // insert async ?
-  return db("step")
-    .insert(step, "id")
-    .then((ids) => {
-      console.log(ids);
-      const [id] = ids;
-      return id;
-    });
+// insert new step to recipe
+function createStep(step, recipeId) {
+  
+
 }
 
-function findStepsByRecipeId(id) {
-  return db("step").where({ recipe_id: id });
-}
-
+// update step by id
 function updateByStepId(id, changes) {
   return db("step").where({ id }).update(changes);
 }
 
+// remove step by id
 function removeByStepId(id) {
   return db("step").where({ id }).del();
 }
