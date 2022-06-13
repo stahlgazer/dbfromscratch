@@ -39,25 +39,6 @@ router.post("/", (req, res) => {
     });
 });
 
-// delete recipe by id
-router.delete("/:id", (req, res) => {
-  const id = req.params.id;
-  Recipes.remove(id)
-    .then((data) => {
-      data === 0
-        ? res
-            .status(200)
-            .json({ message: `recipe with this id does not exist` })
-        : res.status(200).json({ message: `removed ${data} recipe with id: ${id}` });
-    })
-
-    .catch((error) => {
-      res.status(500).json({
-        error: `${error.message}, unable to delete recipe with id: ${id}.`,
-      });
-    });
-});
-
 // update recipe by id
 router.put("/:id", (req, res) => {
   const id = req.params.id;
@@ -69,6 +50,27 @@ router.put("/:id", (req, res) => {
     .catch((error) => {
       res.status(500).json({
         error: `${error.message}, unable to update recipe with id: ${id}.`,
+      });
+    });
+});
+
+// delete recipe by id
+router.delete("/:id", (req, res) => {
+  const id = req.params.id;
+  Recipes.remove(id)
+    .then((data) => {
+      data === 0
+        ? res
+            .status(200)
+            .json({ message: `recipe with this id does not exist` })
+        : res
+            .status(200)
+            .json({ message: `removed ${data} recipe with id: ${id}` });
+    })
+
+    .catch((error) => {
+      res.status(500).json({
+        error: `${error.message}, unable to delete recipe with id: ${id}.`,
       });
     });
 });

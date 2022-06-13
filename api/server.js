@@ -1,9 +1,14 @@
 const express = require("express");
+const cors = require("cors");
+const helmet = require("helmet");
 const server = express();
-server.use(express.json());
+
 const recipeRouter = require("../recipes/recipeRouter.js");
 const stepRouter = require("../steps/stepRouter.js");
 
+server.use(helmet());
+server.use(cors());
+server.use(express.json());
 server.use("/api/recipes", recipeRouter);
 server.use("/api/steps", stepRouter);
 
