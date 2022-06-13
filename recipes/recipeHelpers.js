@@ -24,7 +24,9 @@ function create(recipe) {
 }
 
 // update existing recipe
-function update() {}
+function update(id, changes) {
+  return db("recipe").where({ id }).update(changes);
+}
 
 // remove recipe by id
 function remove(id) {
