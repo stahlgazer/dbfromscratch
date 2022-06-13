@@ -35,7 +35,7 @@ router.post("/", (req, res) => {
     .catch((error) => {
       res
         .status(500)
-        .json({ error: `${error.message}, unable to retrieve recipes.` });
+        .json({ error: `${error.message}, unable to create new recipe.` });
     });
 });
 
