@@ -2,16 +2,17 @@ const db = require("../database/dbConfig.js");
 
 module.exports = {
   findAll,
+  findByID,
   create,
   update,
   remove,
-  findByID,
 };
 
-// returns all recipes with steps
+// returns all recipes
 function findAll() {
   return db("recipe");
 }
+
 // find recipe by id
 function findByID(id) {
   return db("recipe").where({ id });
