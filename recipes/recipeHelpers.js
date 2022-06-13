@@ -19,7 +19,9 @@ function findByID(id) {
 }
 
 // insert new recipe
-function create() {}
+function create(recipe) {
+  return db("recipe").insert(recipe);
+}
 
 // update existing recipe
 function update() {}
