@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Recipes = require("../recipes/recipeHelpers");
 
-// get all recipes
+// get all recipes simple details
 router.get("/", (req, res) => {
   Recipes.findAll()
     .then((data) => res.status(200).json(data))
@@ -12,13 +12,11 @@ router.get("/", (req, res) => {
     });
 });
 
-
-// get recipe by id and display steps!!!
+// get recipe by id in params and display steps!!!
 router.get("/:id", (req, res) => {
   const id = req.params.id;
   Recipes.findbyID(id)
-    .then((data) => 
-    res.status(200).json(data))
+    .then((data) => res.status(200).json(data))
     .catch((error) => {
       res
         .status(500)
@@ -41,7 +39,7 @@ router.post("/", (req, res) => {
     });
 });
 
-// update recipe by id
+// update recipe by id in params
 router.put("/:id", (req, res) => {
   const id = req.params.id;
   const changes = req.body;
@@ -56,7 +54,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-// delete recipe by id
+// delete recipe by id in params
 router.delete("/:id", (req, res) => {
   const id = req.params.id;
   Recipes.remove(id)

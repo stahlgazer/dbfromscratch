@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
     });
 });
 
-// get steps with recipeID
+// get steps with recipeID from params
 router.get("/:id", (req, res) => {
   const id = req.params.id;
 
@@ -25,7 +25,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-// create new step with recipeID
+// create new step with recipeID from params
 router.post("/:id", (req, res) => {
   const recipeId = req.params.id;
   const step = req.body;
@@ -43,7 +43,7 @@ router.post("/:id", (req, res) => {
     });
 });
 
-// update step by stepID
+// update step by stepID from params
 router.put("/:id", (req, res) => {
   const id = req.params.id;
   const changes = req.body;
@@ -57,7 +57,7 @@ router.put("/:id", (req, res) => {
     );
 });
 
-// remove step by stepID
+// remove step by stepID from params
 router.delete("/:id", (req, res) => {
   const id = req.params.id;
   Steps.removeByStepId(id)

@@ -2,10 +2,10 @@ const db = require("../database/dbConfig.js");
 
 module.exports = {
   findAll,
+  findbyID,
   create,
   update,
   remove,
-  findbyID,
 };
 
 // returns all basic recipes for simple cards
@@ -59,12 +59,12 @@ async function findbyID(id) {
   return result;
 }
 
-// insert new recipe
+// creat new recipe
 function create(recipe) {
   return db("recipe").insert(recipe);
 }
 
-// update existing recipe
+// update existing recipe by id
 function update(id, changes) {
   return db("recipe").where({ id }).update(changes);
 }
