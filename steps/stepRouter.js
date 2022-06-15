@@ -33,7 +33,9 @@ router.post("/:id", (req, res) => {
   Steps.createStep(recipeId, step)
     .then((data) =>
       res.status(200).json({
-        message: `new step with id: ${data} created for recipeId: ${recipeId}`,
+        message: `new step created`,
+        id: Number(data),
+        recipe_id: recipeId,
       })
     )
     .catch((error) => {
@@ -49,7 +51,13 @@ router.put("/:id", (req, res) => {
   const changes = req.body;
 
   Steps.updateByStepId(id, changes)
-    .then((data) => res.status(200).json({ message: `updated step, ${data}` }))
+    .then((data) =>
+      data === 0
+        ? res
+            .status(200)
+            .json({ message: `step with id: ${id} doesn't exist.` })
+        : res.status(200).json({ message: `updated step, ${data}` })
+    )
     .catch((error) =>
       res
         .status(500)
