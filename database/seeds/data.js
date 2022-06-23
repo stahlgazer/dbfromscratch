@@ -4,21 +4,23 @@ exports.seed = async function (knex) {
   await knex("recipe").insert([
     {
       id: 1,
-      name: "recipe name1",
-      author: "recipe author1",
-      description: "recipe description1",
-      ingredients: "recipe ingredients1",
-      category: "breakfast",
-      image: "recipe image1",
+      name: "Mac and Cheese",
+      author: "gstahlbaby",
+      description: "The oooooest and goooooest cheeesy goodness",
+      ingredients: "cheese, pasta, milk, butter, seasoning",
+      category: "dinner",
+      image:
+        "https://www.seriouseats.com/thmb/qzfKv8Tm86wx90W0HLskO52W-Lg=/880x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2021__02__20210214-stovetop-mac-cheese-reshoot-vicky-wasik-9-0760b642ca704cf8b2c5121a363a60a2.jpg",
     },
     {
       id: 2,
-      name: "recipe name2",
-      author: "recipe author2",
-      description: "recipe description2",
-      ingredients: "recipe ingredients2",
-      category: "lunch",
-      image: "recipe image2",
+      name: "French Toast",
+      author: "gstahlbaby",
+      description: "delicious and simple french toast",
+      ingredients: "bread, butter, maple syrup, cinnamon, sugar",
+      category: "breakfast",
+      image:
+        "https://www.seriouseats.com/thmb/O1-dTHGmNqo9dUpPHR5LW9DOFA0=/1125x1125/smart/filters:no_upscale()/perfect-quick-easy-french-toast-hero-03-2a9485bbb12b4cf5abcfef53aa9accd9.jpg",
     },
     {
       id: 3,
