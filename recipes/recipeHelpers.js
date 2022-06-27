@@ -61,7 +61,7 @@ async function findbyID(id) {
 
 // creat new recipe
 function create(recipe) {
-  return db("recipe").insert(recipe, ["id"]);
+  return db("recipe").insert(recipe, "id");
 }
 
 // update existing recipe by id
