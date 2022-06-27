@@ -28,8 +28,9 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   Recipes.create(req.body)
     .then((data) => {
-    console.log(data);
-    res.status(200).json({ created: data[0] })})
+      console.log(data);
+      res.status(200).json(data[0]);
+    })
     .catch((error) => {
       res
         .status(500)
