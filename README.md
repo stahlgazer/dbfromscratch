@@ -1,2 +1,4 @@
 # dbfromscratch
-https://digitalcookbookapi.herokuapp.com/ base url
+base urls:
+https://cookbookdb.onrender.com/
+https://digitalcookbookapi.herokuapp.com/
