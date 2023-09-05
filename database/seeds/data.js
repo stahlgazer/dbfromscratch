@@ -28,7 +28,7 @@ exports.seed = async function (knex) {
         "spaghetti, ground beef, onions, garlic, tomatoes, tomato paste, olive oil, basil, salt, pepper, Parmesan cheese",
       category: "dinner",
       image:
-        "https://www.seriouseats.com/thmb/CyOUqI1GpXCmMCAPmxMuRmJN_NU=/1500x1500/smart/filters:no_upscale()/spaghetti-bolognese-15-768x512-26e745f89fa84f4f9cfa80a7231c2fe4.jpg",
+        "https://www.seriouseats.com/thmb/1FilYRIx9EWflwvXQ6N8nw3cKR0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/the-best-slow-cooked-bolognese-sauce-recipe-hero-03_1-3bf4f3401fa84c828f68071df496ddd3.JPG",
     },
     {
       name: "Chicken Caesar Salad",
@@ -39,7 +39,7 @@ exports.seed = async function (knex) {
         "chicken breasts, romaine lettuce, croutons, Parmesan cheese, Caesar dressing",
       category: "lunch",
       image:
-        "https://www.seriouseats.com/thmb/CYeK_Dv8ly1h5K0V0kW7G2ISNuQ=/1500x1500/smart/filters:no_upscale()/caesar-salad-hero-7e47192009ea4d8fb16a2bf8d45ccf48.jpg",
+        "https://www.seriouseats.com/thmb/9TnG8tGrg-1V65xKR6Y8hJu8YJ4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/the-best-caesar-salad-recipe-06-40e70f549ba2489db09355abd62f79a9.jpg",
     },
     {
       name: "Chocolate Chip Cookies",
@@ -50,7 +50,16 @@ exports.seed = async function (knex) {
         "butter, sugar, brown sugar, eggs, vanilla extract, flour, baking soda, salt, chocolate chips",
       category: "dessert",
       image:
-        "https://www.seriouseats.com/thmb/xwl_1BEM9fNQQv5LWXBFYJf1vIc=/1500x1500/smart/filters:no_upscale()/chocolate-chip-cookies-10-200-800x1200-9874ff8a049c4c6ebebf6f5f9be2a9f6.jpg",
+        "https://www.seriouseats.com/thmb/Yp9Ki3R4hXlFUpgxU6dIPuX7su0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__12__20131213-chocolate-chip-cookies-food-lab-55-edit-04edd98fcca7457281abbf6eac559bfc.jpg",
+    },
+    {
+      name: "Cheetos from scratch",
+      author: "gstahlbaby",
+      description: "Homemade cheesy Cheetos for a delicious snack",
+      ingredients: "cornmeal, cheddar cheese, butter, salt, paprika",
+      category: "snack",
+      image:
+        "https://www.seriouseats.com/thmb/J2LRgwz_RkTf_LO93_dohx8bKHU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2013__02__20130226-241927-cook-the-book-cheetos-da1dcc9470f742e2a8d6970202c65ddb.jpg",
     },
   ]);
   await knex("step").insert([
@@ -205,6 +214,47 @@ exports.seed = async function (knex) {
       details:
         "Bake in the preheated oven for 10-12 minutes, or until the edges are lightly golden. Let the cookies cool on the baking sheets for a few minutes before transferring them to wire racks to cool completely.",
       recipe_id: 5,
+    },
+    {
+      number: 1,
+      details:
+        "Preheat your oven to 350°F (175°C). Line a baking sheet with parchment paper.",
+      recipe_id: 6,
+    },
+    {
+      number: 2,
+      details:
+        "In a mixing bowl, combine 1 cup of cornmeal, 1 cup of grated cheddar cheese, 2 tablespoons of melted butter, 1/2 teaspoon of salt, and 1/2 teaspoon of paprika.",
+      recipe_id: 6,
+    },
+    {
+      number: 3,
+      details: "Mix the ingredients until a dough-like consistency forms.",
+      recipe_id: 6,
+    },
+    {
+      number: 4,
+      details:
+        "Form the mixture into small Cheetos-like shapes using your hands or by rolling small portions into logs.",
+      recipe_id: 6,
+    },
+    {
+      number: 5,
+      details:
+        "Place the shaped Cheetos on the prepared baking sheet, leaving some space between each.",
+      recipe_id: 6,
+    },
+    {
+      number: 6,
+      details:
+        "Bake in the preheated oven for about 15-20 minutes or until the Cheetos turn golden brown and crispy.",
+      recipe_id: 6,
+    },
+    {
+      number: 7,
+      details:
+        "Remove from the oven and let them cool for a few minutes before enjoying your homemade Cheetos.",
+      recipe_id: 6,
     },
   ]);
 };
