@@ -53,13 +53,52 @@ exports.seed = async function (knex) {
         "https://www.seriouseats.com/thmb/Yp9Ki3R4hXlFUpgxU6dIPuX7su0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__12__20131213-chocolate-chip-cookies-food-lab-55-edit-04edd98fcca7457281abbf6eac559bfc.jpg",
     },
     {
-      name: "Cheetos from scratch",
+      name: "Cheetos",
       author: "gstahlbaby",
       description: "Homemade cheesy Cheetos for a delicious snack",
       ingredients: "cornmeal, cheddar cheese, butter, salt, paprika",
       category: "snack",
       image:
         "https://www.seriouseats.com/thmb/J2LRgwz_RkTf_LO93_dohx8bKHU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2013__02__20130226-241927-cook-the-book-cheetos-da1dcc9470f742e2a8d6970202c65ddb.jpg",
+    },
+    {
+      name: "Blueberry Pancakes",
+      author: "vapegazer",
+      description:
+        "Fluffy pancakes with fresh blueberries, perfect for breakfast.",
+      ingredients: "pancake mix, blueberries, maple syrup",
+      category: "breakfast",
+      image:
+        "https://pinchofyum.com/wp-content/uploads/Blueberry-Pancakes-Feature-1.jpg",
+    },
+    {
+      name: "Chocolate Cake",
+      author: "Jeff",
+      description: "Indulge in a rich and moist chocolate cake for dessert.",
+      ingredients: "chocolate, flour, sugar, eggs, cocoa powder",
+      category: "dessert",
+      image:
+        "https://www.loveandoliveoil.com/wp-content/uploads/2022/01/sour-cream-chocolate-cake-5.jpg",
+    },
+    {
+      name: "Cheeseburger",
+      author: "martin",
+      description:
+        "Savor the classic taste of a juicy cheeseburger with all your favorite fixings.",
+      ingredients: "ground beef, grilled onions, buns, cheese, condiments",
+      category: "dinner",
+      image:
+        "https://www.thecookierookie.com/wp-content/uploads/2021/04/featured-onion-swiss-burgers-recipe.jpg",
+    },
+    {
+      name: "Pizza",
+      author: "demo",
+      description:
+        "Indulge in a delicious homemade pizza with your favorite toppings.",
+      ingredients: "pizza dough, pizza sauce, cheese, pepperoni, vegetables",
+      category: "dinner",
+      image:
+        "https://thefoodcharlatan.com/wp-content/uploads/2021/08/Homemade-Pizza-Recipe-1-Hour-or-Overnight-20.jpg",
     },
   ]);
   await knex("step").insert([
@@ -255,6 +294,123 @@ exports.seed = async function (knex) {
       details:
         "Remove from the oven and let them cool for a few minutes before enjoying your homemade Cheetos.",
       recipe_id: 6,
+    },
+    // Steps for "Blueberry Pancakes" (recipe_id: 7)
+    {
+      number: 1,
+      details: "Mix pancake mix and water in a bowl until smooth.",
+      recipe_id: 7,
+    },
+    {
+      number: 2,
+      details: "Fold in fresh blueberries into the pancake batter.",
+      recipe_id: 7,
+    },
+    {
+      number: 3,
+      details:
+        "Heat a non-stick skillet over medium-high heat and pour in the pancake batter.",
+      recipe_id: 7,
+    },
+    {
+      number: 4,
+      details:
+        "Cook until bubbles form on the surface, then flip and cook until golden brown.",
+      recipe_id: 7,
+    },
+    {
+      number: 5,
+      details: "Serve with maple syrup and extra blueberries on top.",
+      recipe_id: 7,
+    },
+    // Steps for "Chocolate Cake" (recipe_id: 8)
+    {
+      number: 1,
+      details: "Preheat your oven to 350°F (175°C) and grease a cake pan.",
+      recipe_id: 8,
+    },
+    {
+      number: 2,
+      details:
+        "In a mixing bowl, combine chocolate, flour, sugar, eggs, and cocoa powder.",
+      recipe_id: 8,
+    },
+    {
+      number: 3,
+      details: "Pour the batter into the cake pan and smooth the top.",
+      recipe_id: 8,
+    },
+    {
+      number: 4,
+      details: "Bake for 30-35 minutes, or until a toothpick comes out clean.",
+      recipe_id: 8,
+    },
+    {
+      number: 5,
+      details:
+        "Let the cake cool, then frost with your favorite chocolate frosting.",
+      recipe_id: 8,
+    },
+    // Steps for "Cheeseburger" (recipe_id: 9)
+    {
+      number: 1,
+      details: "Preheat your grill or stovetop skillet to medium-high heat.",
+      recipe_id: 9,
+    },
+    {
+      number: 2,
+      details:
+        "Form ground beef into patties, season with salt and pepper, and grill to desired doneness.",
+      recipe_id: 9,
+    },
+    {
+      number: 3,
+      details:
+        "Grill the onions until lightly browned and toast hamburger buns.",
+      recipe_id: 9,
+    },
+    {
+      number: 4,
+      details:
+        "Place cooked patties with cheese on the buns with grilled onions.",
+      recipe_id: 9,
+    },
+    {
+      number: 5,
+      details:
+        "Add condiments and any desired toppings, then cover with the other half of the bun.",
+      recipe_id: 9,
+    },
+    // Steps for "Pizza" (recipe_id: 10)
+    {
+      number: 1,
+      details:
+        "Preheat your oven to 475°F (245°C) and place a pizza stone or baking sheet inside to heat.",
+      recipe_id: 10,
+    },
+    {
+      number: 2,
+      details:
+        "Roll out pizza dough on a floured surface to your desired thickness.",
+      recipe_id: 10,
+    },
+    {
+      number: 3,
+      details:
+        "Spread pizza sauce over the dough, leaving a border for the crust.",
+      recipe_id: 10,
+    },
+    {
+      number: 4,
+      details:
+        "Add your favorite toppings, such as cheese, pepperoni, and vegetables.",
+      recipe_id: 10,
+    },
+    {
+      number: 5,
+      details:
+        "Carefully transfer the pizza onto the hot stone or baking sheet and bake until the crust is golden and the cheese is bubbly.",
+      recipe_id: 10,
     },
   ]);
 };
